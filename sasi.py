@@ -32,8 +32,8 @@ while True:
     try:
         yazdır = driver.find_element(By.CLASS_NAME, "dbar").text
         print(yazdır)
-        with open('sonuç.txt', 'w') as f:
-            f.write(yazdır)
+        with open('sonuç.txt', 'a') as f:
+            f.write(yazdır + '\n')  # Her sonuç bilgisinin yeni bir satıra yazılmasını sağlar
     except:
         print("Hatalı şase numarası girdiniz.")
 
@@ -43,4 +43,3 @@ while True:
     # Klavyeden q tuşuna basıldığında programı sonlandırma
     if keyboard.is_pressed('q'):
         break
-
